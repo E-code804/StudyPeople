@@ -29,4 +29,8 @@ from django.urls import path, include  # include for views.py routes
 #     return HttpResponse("ROOM")
 
 
-urlpatterns = [path("admin/", admin.site.urls), path("", include("base.urls"))]
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", include("base.urls")),
+    path("api/", include("base.api.urls")),
+]
